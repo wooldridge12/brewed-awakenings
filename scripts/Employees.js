@@ -13,7 +13,7 @@ document.addEventListener(
     (clickEvent) => {
         const itemClicked = clickEvent.target
         // giving itemClicked the value of the clickEvent target, where the mouse clicked.
-        
+
         if (itemClicked.id.startsWith("employee")) {
             // item click has an id that starts with employee. you end up with and ARRAY like this ["employee","ID"]. 
             // checking if the id attrubute of the html element you clicked on starts with the string of "employee" and will evaluate to true or false.
@@ -23,7 +23,7 @@ document.addEventListener(
             // refering to employees array, and storing ONE object in the newly declard variable of employee.
 
             for (const employee of employees) {
-            
+
                 if (employee.id === parseInt(employeeId)) {
                     // parseInt is turning a string into an interger. Alot of crazy stuff going on when i google it. It is scary. the list element. 
                     // referencing the id key on each OBJECT.
@@ -34,7 +34,7 @@ document.addEventListener(
                             // setting the value of the varible employeeOrders to a newly generated array, VIA the filter() method.
                             if (order.employeeId === employee.id) {
                                 return true
-                            } 
+                            }
                         }
                     )
                     window.alert(` ${employee.name} sold ${employeeOrders.length} products`)
